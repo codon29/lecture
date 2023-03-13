@@ -1,0 +1,14 @@
+1. github 저장소 만들기
+2. vscode의 git bash에서 git init 명령어 실행
+3. git add READ.md 하던지 nano README.md 명령어 실행한 후 # 제목 , 내용 ctrl+x 나가고 y 눌러서 완료
+4. nano .gitignore로 들어가서 업로드 되면 안되는 파일이나 폴더를 명시 => **node_modules
+node_modules는 어차피 pakage.json에 명시된 defendencies에 입력되있는 것들이 어차피 설치됨.
+굳이 업로드하고 다시 불러올 필요가 없음.
+5. git add . 하고 git status로 확인
+git commit -m "메세지" 후 git status로 확인
+6. 원격저장소의 위치인 리모트 설정.
+git remote add origin "본인 저장소 주소"
+git push origin main(브랜치명)
+
+git add . 을 취소하고싶다면 git reset HEAD .
+.gitignore를 node에 맞게 수정하고 싶다면 깃허브에서 수정가능
