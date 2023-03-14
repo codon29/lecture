@@ -10,4 +10,5 @@ const ctrl = require("./home.ctrl"); // 콘터롤러와 연결하는 코드
 router.get("/", ctrl.hello);
 
 router.get("/login", ctrl.login);
+
 module.exports = router; //app.js에 연결할수있도록 외부로 내보내기
