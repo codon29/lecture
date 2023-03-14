@@ -6,12 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- app.js 안의 app.use(express.static(`${__dirname}/src/public`))를 이용해서 정적경로를 이용할 수 있게 되었음. -->
-        <script src="/js/home/login.js"></script> 
+        <script src="/js/home/login.js" defer></script> 
         
         <title>Document</title>
     </head>
     <body>
-        <input type="text" placeholder="아이디"><br>
-        <input type="text"><br>
+        <input id="id" type="text" placeholder="아이디"><br>
+        <input id="psword" type="text" placeholder="비밀번호"><br>
+        <button>로그인</button>
     </body>
 </html>
