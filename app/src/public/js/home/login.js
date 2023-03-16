@@ -18,7 +18,14 @@ const  id = document.querySelector("#id"),
         console.log("json",JSON.stringify(req)); //json {"id":"qwe","psword":"asdasd"}
         fetch("/login", {
             method:"POST",
-            body: JSON.stringify(req) // stringify는 오브젝트 파일을 문자열로 바꿔주는 메서드
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify(req), // stringify는 오브젝트 파일을 문자열로 바꿔주는 메서드
         })
+        .then((res) => res.json())
+        .then((res) => {
+            
+        });
 
     }
