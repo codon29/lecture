@@ -23,9 +23,18 @@ const  id = document.querySelector("#id"),
             },
             body: JSON.stringify(req), // stringify는 오브젝트 파일을 문자열로 바꿔주는 메서드
         })
-        .then((res) => res.json())
-        .then((res) => {
-            
-        });
+            .then((res) => res.json())
+            .then((res) => {
+                if (res.success) {
+                    location.href = "/";
+                } else {
+                    alert(res.msg);
+                }
+            })
+            .catch((err) => {
+                // Error: 로그인 중 에러 발생 이라고 콘솔창에 띄움.
+                console.error(new Error("로그인 중 에러 발생"));
+                console.error("로그인중 오류 발생");
+            });
 
     }
